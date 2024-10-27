@@ -1,0 +1,4 @@
+[submodule "cyblog/public"]
+	path = cyblog/public
+	url = https://github.com/UncleSocks/unclesocks.github.io.git
+	branch = main
