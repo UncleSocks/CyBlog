@@ -1,4 +1,42 @@
 baseURL = 'https://unclesocks.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'CyBlog'
 theme = 'waffles'
+
+[taxonomies]
+tag = "tags"
+
+[pagination]
+  disableAliases = false
+  pagerSize = 20
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts/'
+weight = 20
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags/'
+weight = 30
+
+[params.about]
+title = "UncleSocks' CyBlog"
+description = "My personal blog that will record my cybersecurity journey."
+
+[[params.socialLinks]]
+icon = "fa-brands fa-linkedin"
+url = "https://www.linkedin.com/in/tyrone-kevin-ilisan-ece/"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+url = "https://github.com/UncleSocks"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-youtube"
+url = "https://www.youtube.com/@unclesocks546"
