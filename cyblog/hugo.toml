@@ -40,3 +40,6 @@ url = "https://github.com/UncleSocks"
 [[params.socialLinks]]
 icon = "fa-brands fa-youtube"
 url = "https://www.youtube.com/@unclesocks546"
+
+[params]
+copyright = "Made using Hugo and the Waffles theme."
