@@ -25,6 +25,11 @@ name = 'Tags'
 pageRef = '/tags/'
 weight = 30
 
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 40
+
 [params.about]
 title = "UncleSocks' CyBlog"
 description = "My personal blog that will record my cybersecurity journey."
