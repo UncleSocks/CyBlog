@@ -3,6 +3,7 @@ title = 'Overcoming IPv4 Private Address Overlaps in Large Business-to-Business 
 date = 2022-12-05
 author = "Tyrone Ilisan, E.C."
 draft = false
+tags = ["Research","Network","Cisco","RFC6598"]
 +++
 
 _This was our final Networking report paper during my master's degree in Information Security (InfoSec) that we did not try to publish. The topic and initial router configurations were presented by my group mate, E.C. However, I had to make some changes to the provided router configurations and network architecture to remediate the issues we faced in the lab. I deployed the lab environment and revised router configuration using GNS3, then wrote our report paper, which you see now below. I decided to post this in my personal blog since there are limited resources out there relating to this topic and the hope that this will fill in certain knowledge gaps. As a matter fact, I had troubles researching and understanding certain concepts because of this limitation._
