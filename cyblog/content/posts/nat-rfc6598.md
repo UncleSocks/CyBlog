@@ -1,7 +1,7 @@
 +++
 title = 'Overcoming IPv4 Private Address Overlaps in Large Business-to-Business Network Scenarios with Virtual Routing and Address Translations Using RFC 6598 Shared Address Space'
 date = 2022-12-05
-draft = true
+draft = false
 +++
 
 **Disclaimer**: _This is our final Networking paper during my master's degree in Information Security (InfoSec). The topic and initial router configurations were presented by my group mate, E.C. However, I had to make some changes to the provided router configurations and network architecture to remediate the issues we faced in the lab. I deployed the lab environment and revised router configuration using GNS3, then wrote our report paper, which you see below._
