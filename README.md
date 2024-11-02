@@ -4,7 +4,7 @@
 
 This is my blog documenting my cybersecurity journey, but it would also include other topics I am interested in, including electronics and other engineering-related discussions. The CyBlog is created using Hugo and my very own Waffles 🧇 theme. 
 
-This repository stores all blog files, including Hugo-related files and Waffles theme. A separate repository, unclesocks.github.io, serves the public files using GitHub Pages, making the CyBlog accessible from the Internet.
+This repository stores all blog files, including Hugo-related files and Waffles theme. A separate repository, unclesocks.github.io, is used as a submodule to serve the public files using GitHub Pages, making the CyBlog accessible from the Internet.
 
 ## Waffles Theme
 The Waffles Hugo theme was created mainly for this CyBlog but is also available for others and is under the MIT license. For more information about this theme, including how to install it for your Hugo websites, please visit https://github.com/UncleSocks/waffles-hugo-theme-for-cyblog
