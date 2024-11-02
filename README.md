@@ -4,6 +4,8 @@
 
 This is my blog documenting my cybersecurity journey, but it would also include other topics I am interested in, including electronics and other engineering-related discussions. The CyBlog is created using Hugo and my very own Waffles 🧇 theme. 
 
+This repository stores all blog files, including Hugo-related files and Waffles theme. A separate repository, unclesocks.github.io, serves the public files using GitHub Pages, making the CyBlog accessible from the Internet.
+
 ## Waffles Theme
 The Waffles Hugo theme was created mainly for this CyBlog but is also available for others and is under the MIT license. For more information about this theme, including how to install it for your Hugo websites, please visit https://github.com/UncleSocks/waffles-hugo-theme-for-cyblog
 
@@ -22,8 +24,8 @@ You are free to:
 The licensor cannot revoke these freedoms as long as you follow the license terms.
 
 Under the following terms:
-- Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-- NonCommercial — You may not use the material for commercial purposes .
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- NonCommercial — You may not use the material for commercial purposes.
 - ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
 No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
