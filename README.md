@@ -7,7 +7,8 @@ This is my blog documenting my cybersecurity journey, but it would also include 
 This repository stores all blog files, including Hugo-related files and Waffles theme. A separate repository, unclesocks.github.io, is used as a submodule to serve the public files using GitHub Pages, making the CyBlog accessible from the Internet.
 
 ## Waffles Theme
-The Waffles Hugo theme was created mainly for this CyBlog but is also available for others and is under the MIT license. For more information about this theme, including how to install it for your Hugo websites, please visit https://github.com/UncleSocks/waffles-hugo-theme-for-cyblog
+The Waffles Hugo theme was created mainly for this CyBlog but is also available for others and is under the MIT license. For more information about this theme, including how to install it for your Hugo websites, please visit its repository here: 
+https://github.com/UncleSocks/waffles-hugo-theme-for-cyblog
 
 ## Licenses
 The CyBlog source code and the blog posts are under different licenses. Please read the LICENSE.md file found in this repository for the complete details of each license.
