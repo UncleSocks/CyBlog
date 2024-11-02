@@ -1,4 +1,4 @@
-MIT License
+# MIT License
 
 Copyright (c) 2024 Tyrone Kevin Ilisan
 
@@ -22,7 +22,9 @@ SOFTWARE.
 
 
 
-CC Attribution-NonCommercial-ShareAlike 4.0 International License
+
+
+# CC Attribution-NonCommercial-ShareAlike 4.0 International License
 
 Attribution-NonCommercial-ShareAlike 4.0 International
 
