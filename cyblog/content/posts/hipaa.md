@@ -5,7 +5,7 @@ author = "Tyrone Ilisan"
 draft = false
 +++
 
-Similar to my previous post regarding RFC 6598 and Network Address Translation (NAT), when I was still studying for my master's degree in Information Security (InfoSec), I was tasked to present the Health Insurance Portability and Accountability Act (HIPAA) of 1996 and how it relates to InfoSec. Being in this industry we are often tasked with safeguarding sensitive personal information, and this may include personal health information (PHI). HIPAA of 1996 establishes a standard for protecting sensitive health information of patients from unauthorized disclosures [`1`]. However, understanding HIPAA of 1996 and how to comply with it as an InfoSec professional can be daunting due to its scope and complexity. In this blog post, I will try to make HIPAA of 1996 digestible in the context of InfoSec and highlight available tools to assist professionals in their journey to compliance.
+Similar to my previous post regarding RFC 6598 and Network Address Translation (NAT), when I was still studying for my master's degree in Information Security (InfoSec), I was tasked to present the Health Insurance Portability and Accountability Act (HIPAA) of 1996 and how it relates to InfoSec. Being in this industry we are often tasked with safeguarding sensitive personal information, and this may include protected health information (PHI). HIPAA of 1996 establishes a standard for protecting sensitive health information of patients from unauthorized disclosures [`1`]. However, understanding HIPAA of 1996 and how to comply with it as an InfoSec professional can be daunting due to its scope and complexity. In this blog post, I will try to make HIPAA of 1996 digestible and highlight available tools and resources to assist professionals in their journey to compliance. I hope this blog post can become a single-page reference or guide in understanding HIPAA in the context of InfoSec.
 
 # Overview of the HIPAA of 1996
 
@@ -51,8 +51,15 @@ HIPAA has five (5) Titles:
 
 As InfoSec professionals, we will primarily concern ourselves with Title II. This title includes the Administrative Simplication, Security, and Privacy Rules [`12`]. The rest of the blog post basically deep dives into Title II in the context of InfoSec.
 
-A good resource to understand HIPAA's Administrative Simplication Rule is Cornell Law School's subchapter of the Administrative Data Standards and Related Requirements, which can be accessed [`here`](https://www.law.cornell.edu/cfr/text/45/chapter-A/subchapter-C). 
+### Code of Federal Regulations Governing HIPAA Title II 
 
+**[`IMPORTANT!`]**: Throughout this post, I will be referencing the **Title 45 of the Code of Federal Regulations (CFR)** or **45 CFR**. Title II of HIPAA is primarily implemented under **45 CFR Parts 160, 162, and 164**, specifically within **Subchapter C - Administrative Data Standards and Related Requirements** [`12`]:
+
+- Part 160 - General Administrative Requirements
+- Part 162 - Administrative Requirements (Electronic Transactions and Code Sets)
+- Part 164 - Security and Privacy
+
+A good resource to navigate through the different parts of 45 CFR Subchapter C is using [`Cornell Law School's Administrative Data Standards and Related Requirements`](https://www.law.cornell.edu/cfr/text/45/chapter-A/subchapter-C) webpage.
 # A Deep Dive Into the HIPAA Administrative Simplification Rules
 
 CMS defines Administrative Simplification as the set of HIPAA requirements that govern how **covered entities** conduct electronic, administrative transactions and set standards for transmitting PHI [`13`]. The definition sheds some light on how security and privacy can come into play in HIPAA.
@@ -93,14 +100,7 @@ Health Care Clearinghouses processes health information received from one entity
 
 ## Business Associates
 
-Business Associates (BA) are essentially third-party service providers of covered entities that use or disclose identifiable PHI as part of their function, service, or activity. As a result, the Privacy Rule requires the covered entities to obtain a written **Business Associate Contract** containing satisfactory assurances in appropriately safeguarding the PHI the BA receives or creates on behalf of the covered entity [`2`]. 
-
-The HHS has a [`Model Business Associate Agreement`](https://www.hhs.gov/sites/default/files/model-business-associate-agreement.pdf) that can be used by covered entities as a contract template [`18`].
-
-### Business Associate Contract
-
-The Business Associate Contract must contain elements specified in 45 CFR § 164.314(b)(2)(i):
-- “Implement administrative, physical, and technical safeguards that reasonably and appropriately protect the confidentiality, integrity, and availability of the electronic protected health information that it creates, receives, maintains, or transmits on behalf of the covered entity…;”
+Business Associates (BA) are essentially third-party service providers of covered entities that use or disclose identifiable PHI as part of their function, service, or activity [`18`]. Under the Security Rule and Privacy Rule of HIPAA, covered entities are required to obtain written **Business Associate Agreements** (BAA) or contracts that provides satisfactory assurance that the BA will appropriately safeguard the PHI. This post will expand on the BAA under the Security Rule and Privacy Rule sections.
 
 
 # References
@@ -122,4 +122,4 @@ The Business Associate Contract must contain elements specified in 45 CFR § 164
 15. Centers for Medicare & Medicaid Services, Covered Entity Decision Tool, cms.gov, https://www.cms.gov/Regulations-and-Guidance/Administrative-Simplification/HIPAA-ACA/Downloads/CoveredEntitiesChart20160617.pdf (accessed November 03, 2024)
 16. Cornell Law School, Health care provider, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=808782b490d63d2744ee5d9a1336d988&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
 17. Cornell Law School, Health care clearinghouse, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=8b76bcc5b120eabe975323d7896f0cf3&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
-18. U.S. Department of Health and Human Services, MODEL BUSINESS ASSOCIATE AGREEMENT, hhs.gov, https://www.hhs.gov/sites/default/files/model-business-associate-agreement.pdf (accessed November 03, 2024)
+18. Cornell Law School, 45 CFR § 160.103 - Definitions, law.cornell.edu, https://www.law.cornell.edu/cfr/text/45/160.103 (accessed November 03, 2024)
