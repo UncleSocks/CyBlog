@@ -55,11 +55,11 @@ A good resource to understand HIPAA's Administrative Simplication Rule is Cornel
 
 # A Deep Dive Into the HIPAA Administrative Simplification Rules
 
-CMS defines Administrative Simplification as the set of HIPAA requirements that govern how **covered entities** conduct electronic, administrative transactions and set standards for transmitting PHI [`13`].
+CMS defines Administrative Simplification as the set of HIPAA requirements that govern how **covered entities** conduct electronic, administrative transactions and set standards for transmitting PHI [`13`]. The definition sheds some light on how security and privacy can come into play in HIPAA.
 
 ## Covered Entities
 
-Covered Entities are simply individuals and organizations that need to comply with HIPAA, which includes *health plans*, *clearninghouses*, and *health care providers* [`14`]. 
+Covered Entities are simply individuals and organizations that need to comply with HIPAA, which includes **health plans**, **health care providers**, and **health care clearinghouses** [`14`]. 
 
 A [`Covered Entity Decision Tool`](https://www.cms.gov/Regulations-and-Guidance/Administrative-Simplification/HIPAA-ACA/Downloads/CoveredEntitiesChart20160617.pdf), as shown in Fig. 4 below, is provided by the CMS to help indivuals and organizations determined whether they are a covered entity [`15`]. 
 
@@ -68,7 +68,7 @@ A [`Covered Entity Decision Tool`](https://www.cms.gov/Regulations-and-Guidance/
 
 ### Health Plans
 
-Health Plans are individual or group plans that provide or pay the cost of medical care, including [`16`]:
+Health Plans are individual or group plans that provide or pay the cost of medical care, including [`2`]:
 - Health insurance companies
 - HMOs or health maintenance oraganizations
 - Employer-sponsored health plans
@@ -78,7 +78,7 @@ Health Plans are individual or group plans that provide or pay the cost of medic
 
 ### Health Care Providers
 
-Health Care Providers any person or organization that provides medical or health-related services, and furnishes, bills, or is paid for health care in the normal course of business [`17`]. A health care provider becomes a covered entity when it electronically transmits HIPAA Transactions and Code Rule Sets [`14`]. These providers include, but are not limited to:
+Health Care Providers any person or organization that provides medical or health-related services, and furnishes, bills, or is paid for health care in the normal course of business [`16`]. A health care provider becomes a covered entity when it electronically transmits HIPAA Transactions and Code Rule Sets [`14`]. These providers include, but are not limited to:
 - Doctors
 - Clinics
 - Psychologists
@@ -87,7 +87,21 @@ Health Care Providers any person or organization that provides medical or health
 - Nursing homes
 - Pharmacies
 
-### Clearninghouses
+### Health Care Clearninghouses
+
+Health Care Clearinghouses processes health information received from one entity in a nonstandard format to a standard transaction, and vice versa [`17`]. 
+
+## Business Associates
+
+Business Associates (BA) are essentially third-party service providers of covered entities that use or disclose identifiable PHI as part of their function, service, or activity. As a result, the Privacy Rule requires the covered entities to obtain a written **Business Associate Contract** containing satisfactory assurances in appropriately safeguarding the PHI the BA receives or creates on behalf of the covered entity [`2`]. 
+
+The HHS has a [`Model Business Associate Agreement`](https://www.hhs.gov/sites/default/files/model-business-associate-agreement.pdf) that can be used by covered entities as a contract template [`18`].
+
+### Business Associate Contract
+
+The Business Associate Contract must contain elements specified in 45 CFR § 164.314(b)(2)(i):
+- “Implement administrative, physical, and technical safeguards that reasonably and appropriately protect the confidentiality, integrity, and availability of the electronic protected health information that it creates, receives, maintains, or transmits on behalf of the covered entity…;”
+
 
 # References
 
@@ -106,5 +120,6 @@ Health Care Providers any person or organization that provides medical or health
 13. Centers for Medicare & Medicaid Services, HIPAA Administrative Simplification Resources and FAQs, cms.gov, https://www.cms.gov/training-education/look-up-topics/hipaa-administrative-simplification-resources-and-faqs (accessed November 03, 2024)
 14. Centers for Medicare & Medicaid Services, Are You a Covered Entity?, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/hipaa/covered-entities (accessed November 03, 2024)
 15. Centers for Medicare & Medicaid Services, Covered Entity Decision Tool, cms.gov, https://www.cms.gov/Regulations-and-Guidance/Administrative-Simplification/HIPAA-ACA/Downloads/CoveredEntitiesChart20160617.pdf (accessed November 03, 2024)
-16. U.S. Department of Health and Human Services, Summary of the HIPAA Privacy Rule, hhs.gov, https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html (accessed November 03, 2024)
-17. Cornell Law School, Health care provider, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=808782b490d63d2744ee5d9a1336d988&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
+16. Cornell Law School, Health care provider, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=808782b490d63d2744ee5d9a1336d988&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
+17. Cornell Law School, Health care clearinghouse, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=8b76bcc5b120eabe975323d7896f0cf3&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
+18. U.S. Department of Health and Human Services, MODEL BUSINESS ASSOCIATE AGREEMENT, hhs.gov, https://www.hhs.gov/sites/default/files/model-business-associate-agreement.pdf (accessed November 03, 2024)
