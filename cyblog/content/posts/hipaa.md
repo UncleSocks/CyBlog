@@ -1,7 +1,7 @@
 +++
-title = 'Health Insurance Portability and Accountability Act (HIPAA) of 1996: Connecting Information Security and the U.S. Healthcare'
+title = "Connecting Information Security and the U.S. Healthcare: An Information Security Professional's Guide to the Health Insurance Portability and Accountability Act (HIPAA) of 1996, Title II - Administrative Simplification"
 date = 2024-11-02T22:30:52+08:00
-author = "Tyrone Ilisan"
+author = "Tyrone Kevin Ilisan"
 draft = false
 +++
 
@@ -9,9 +9,9 @@ Similar to my previous post regarding RFC 6598 and Network Address Translation (
 
 # Overview of the HIPAA of 1996
 
-The HIPAA of 1996 (hereinafter known as "HIPAA") was signed or *enacted* into Law by President Bill Clinton on August 21, 1996 [`2`]. The act became **Public Law 104-191**, which means it was passed during the 104th Congress with 191 as its numerical designation [`3`]. 
+The HIPAA of 1996 (hereinafter known as "HIPAA") was signed or *enacted* into Law by President Bill Clinton on August 21, 1996 [`2`]. The act became **Public Law 104-191**, which means it was passed during the 104th Congress with 191 as its numerical designation [`3`]. As previously stated, HIPAA establishes a standard for protecting sensitive health information of patients from unauthorized disclosures [`1`].
 
-In summary, according to the long title, the HIPAA of 1996 is:
+Technically, according to the long title, HIPAA is:
 
 ```
 “An act to amend the Internal Revenue Code of 1986 to improve portability and continuity of health insurance coverage in the group and individual markets, to combat waste, fraud, and abuse in health insurance and health care delivery, to promote the use of medical savings accounts, to improve access to long-term care services and coverage, to simplify the administration of health insurance, and for other purposes.”
@@ -40,7 +40,7 @@ Following the timeline three (3) NPRMs were added to HIPAA, shown in Fig. 2 belo
 On April 22, 2024, the Office for Civil Rights (OCR), issued the Final Rule for the privacy of reproductive health, entitled **HIPAA Privacy Rule to Support Reproductive Health Care Privacy** [`11`].
 
 
-## Titles of HIPAA
+## The Titles of HIPAA
 
 HIPAA has five (5) Titles:
 - Title I - Health Care Access, Portability, and Renewability
@@ -60,9 +60,10 @@ As InfoSec professionals, we will primarily concern ourselves with Title II. Thi
 - Part 164 - Security and Privacy
 
 A good resource to navigate through the different parts of 45 CFR Subchapter C is using [`Cornell Law School's Administrative Data Standards and Related Requirements`](https://www.law.cornell.edu/cfr/text/45/chapter-A/subchapter-C) webpage.
-# A Deep Dive Into the HIPAA Administrative Simplification Rules
 
-CMS defines Administrative Simplification as the set of HIPAA requirements that govern how **covered entities** conduct electronic, administrative transactions and set standards for transmitting PHI [`13`]. The definition sheds some light on how security and privacy can come into play in HIPAA.
+# Entities Required to Comply with HIPAA
+
+CMS defines Administrative Simplification as the set of HIPAA requirements that govern how **covered entities** conduct electronic, administrative transactions and set standards for transmitting PHI [`13`]. The definition sheds some light on how security and privacy can play a role in HIPAA.
 
 ## Covered Entities
 
@@ -102,6 +103,73 @@ Health Care Clearinghouses processes health information received from one entity
 
 Business Associates (BA) are essentially third-party service providers of covered entities that use or disclose identifiable PHI as part of their function, service, or activity [`18`]. Under the Security Rule and Privacy Rule of HIPAA, covered entities are required to obtain written **Business Associate Agreements** (BAA) or contracts that provides satisfactory assurance that the BA will appropriately safeguard the PHI. This post will expand on the BAA under the Security Rule and Privacy Rule sections.
 
+# A Deep Dive Into the HIPAA Administrative Simplification Rules
+
+Administrative Simplification includes the HIPAA Security Rule and Privacy Rule, as well as the Administrative Requirements. Thus, before delving into the security and privacy aspects of HIPAA, this post will first introduce **45 CFR Part 162**, also known as **Administrative Requirements** [`19`].
+
+## Administrative Requirements
+The CMS, on behalf of the HHS, is responsible for administering and enforcing the Administrative Requirements of HIPAA but their authority does not extend to the HIPAA Security Rule and Privacy Rule [`20`]. Specifically, the CMS investigates HIPAA transaction complaints and audits:
+- Standards
+- Code Sets
+- Unique Identifiers
+- Operating Rules
+
+### Standards
+
+In the long title of HIPAA, two of its purposes is to combat waste and to simplify the administration of health insurance. Thus, HIPAA required HHS to adopt standard transactions for the electronic exchange of health care data, resulting in the use of consistent language, format, and code sets (discussed in the next subchapter) [`21, 22`]. A **Transaction** is an electronic exchange of information between entities to carry out financial or administrative activities relating to health care [`21`]. 
+
+Each HIPAA adopted transaction uses a specific **ASC X12N - Insurance Version 5010** standard for the electronic exchange of health care data (Electronic Data Interchange or EDI), as shown in TABLE 1 below [`22`]:
+
+|  Transaction  |  Standard  |
+|----------|----------|
+| Health Care Claim | X12N 837 |
+| Health Care Claim Payment Advice | X12N 835 |
+| Health Care Claim Status Request/Notification | X12N 276/277 |
+| Eligibility, Coverage, or Benefit Inquiry/Information | X12N 270/271 |
+| Benefit Enrollment and Maintenance | X12N 834 |
+| Health Care Service Review Information | X12N 278 |
+| Payment Order/Remittance Advice | X12N 820 |
+
+*TABLE 1. HIPAA Adopted Transactiona and X12N Standard Mapping*
+
+*Note:* This excludes retail pharmacies, which uses NCPDP Version D.0 and NCPDP Version 3.0. This post will not list these standards for simplicity since this is only meant to provide an overview [`23`].
+
+Fig. 3 below displays sample standardized transactions between providers and insurance/payors:
+
+![HIPAA Transactions](../../hipaa/hipaa-transactions.png)
+*Fig. 3. HIPAA Transactions*
+
+A great infographic from CMS regarding Health Care Transaction Basics can be accessed [`here`](https://www.cms.gov/files/document/health-care-transactions-basics.pdf). 
+
+### Code Sets
+
+Code Sets are shared list of codes that simplifies longer names or explanations, resulting in faster information format translations [`24`]. Additionaly, specific code sets are adopted by the HHS for its electronic health care transactions, which are used in different health care functions [`24`]:
+- Billing
+- Tracking Public Health Trends
+- Research
+
+TABLE 2 outlines some of health care activities found in standard transactions and their respective identifying code sets [`24`]:
+|  Health Care Activity/Item  |  Adopted Code Set  |
+|----------|----------|
+| Diagnoses (ICD-10-CM) and Procedures (ICD-10-PCS) | ICD-10 (International Classification of Diseases, 10th edition) |
+| Outpatient services/procedures | CPT (Current Procedure Terminology) |
+| Health Care Equipment/Supplies and Services Not Covered by CPT Codes | HCPCS (Health Care Common Procedure Coding System) |
+| Dental Procedures | CDT (Code on Dental Procedures and Nomenclature) |
+| Drug Products | National Drug Codes (NDC) |
+
+*TABLE 2. Health Care Activity and Adopted Code Set Mapping*
+
+Another great infographic from CMS about Code Set Basics can be found [`here`](https://www.cms.gov/files/document/code-sets.pdf).
+
+### Unique Identifiers
+
+HIPAA has set unique identifiers for employers and providers, which must be used on all HIPAA transactions [`25`]. Employers are required to have an **Employer Identification Number (EIN)** [`25`]. Providers must use a unique 10-digit **National Provider Identifier (NPI)** [`25`]. At the time of writing, no identifiers are adopted for health plans and patients [`25`].
+
+### Operating Rules
+
+According to CMS [`26`], Operating Rules specify the required information for standard transactions. Unlike the previous sections, the authority entity for the operating rules is the **CAQH CORE** [`26`].
+
+## Security and Privacy
 
 # References
 
@@ -123,3 +191,11 @@ Business Associates (BA) are essentially third-party service providers of covere
 16. Cornell Law School, Health care provider, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=808782b490d63d2744ee5d9a1336d988&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
 17. Cornell Law School, Health care clearinghouse, law.cornell.edu, https://www.law.cornell.edu/definitions/index.php?width=840&height=800&iframe=true&def_id=8b76bcc5b120eabe975323d7896f0cf3&term_occur=999&term_src=Title:45:Chapter:A:Subchapter:C:Part:160:Subpart:A:160.103 (accessed November 03, 2024)
 18. Cornell Law School, 45 CFR § 160.103 - Definitions, law.cornell.edu, https://www.law.cornell.edu/cfr/text/45/160.103 (accessed November 03, 2024)
+19. Cornell Law School, 45 CFR Part 162 - PART 162—ADMINISTRATIVE REQUIREMENTS, law.cornell.edu, https://www.law.cornell.edu/cfr/text/45/part-162 (accessed November 08, 2024)
+20. Centers for Medicare & Medicaid Services, Enforcement and Compliance, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/enforcement (accessed November 08. 2024)
+21. Centers for Medicare & Medicaid Services, Transactions Overview, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/transactions (accessed November 08. 2024)
+22. Centers for Medicare & Medicaid Services, Health Care Transactions Basics, cms.gov, https://www.cms.gov/files/document/health-care-transactions-basics.pdf (accessed November 08. 2024)
+23. Centers for Medicare & Medicaid Services, Adopted Standards and Operating Rules. cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/ (accessed November 08. 2024)
+24. Centers for Medicare & Medicaid Services, Code Sets Basics, cms.gov, https://www.cms.gov/files/document/code-sets.pdf (accessed November 08. 2024)
+25. Centers for Medicare & Medicaid Services, Unique Identifiers, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/unique-identifiers (accessed November 08. 2024)
+26. Centers for Medicare & Medicaid Services, Operating Rules Overview, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/operating-rules (accessed November 08. 2024)
