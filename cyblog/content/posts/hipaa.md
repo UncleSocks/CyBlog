@@ -1,5 +1,5 @@
 +++
-title = "Connecting Information Security and the U.S. Healthcare: An Information Security Professional's Guide to the Health Insurance Portability and Accountability Act (HIPAA) of 1996, Title II - Administrative Simplification"
+title = "Connecting Information Security and the U.S. Healthcare: An Information Security Professional's Detailed Guide to the Health Insurance Portability and Accountability Act (HIPAA) of 1996, Title II - Administrative Simplification"
 date = 2024-11-02T22:30:52+08:00
 author = "Tyrone Kevin Ilisan"
 draft = false
@@ -163,13 +163,18 @@ Another great infographic from CMS about Code Set Basics can be found [`here`](h
 
 ### Unique Identifiers
 
-HIPAA has set unique identifiers for employers and providers, which must be used on all HIPAA transactions [`25`]. Employers are required to have an **Employer Identification Number (EIN)** [`25`]. Providers must use a unique 10-digit **National Provider Identifier (NPI)** [`25`]. At the time of writing, no identifiers are adopted for health plans and patients [`25`].
+HIPAA has set unique identifiers for employers and providers, which must be used on all HIPAA transactions [`25`]. Employers are required to have an Internal Revenue Service (IRS)-issued **Employer Identification Number (EIN)** [`25`]. Providers must use a unique 10-digit **National Provider Identifier (NPI)** [`25`]. At the time of writing, no identifiers are adopted for health plans and patients [`25`].
 
 ### Operating Rules
 
 According to CMS [`26`], Operating Rules specify the required information for standard transactions. Unlike the previous sections, the authority entity for the operating rules is the **CAQH CORE** [`26`].
 
 ## Security and Privacy
+
+Now that the Administrative Requirements are out of the way (phew!), the rest of the post will focus on the security and privacy aspect of HIPAA under **45 CFR Part 164**, specifically:
+- Subpart C: Security Standards for the Protection of Electronic Protected Health Information (Security Rule)
+- Subpart D: Notification in the Case of Breach of Unsecured Protected Health Information (Breach Notification Rule)
+- Subpart E: Privacy of Individually Identifiable Health Information (Privacy Rule)
 
 # References
 
@@ -199,3 +204,4 @@ According to CMS [`26`], Operating Rules specify the required information for st
 24. Centers for Medicare & Medicaid Services, Code Sets Basics, cms.gov, https://www.cms.gov/files/document/code-sets.pdf (accessed November 08. 2024)
 25. Centers for Medicare & Medicaid Services, Unique Identifiers, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/unique-identifiers (accessed November 08. 2024)
 26. Centers for Medicare & Medicaid Services, Operating Rules Overview, cms.gov, https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/operating-rules (accessed November 08. 2024)
+27. Cornell Law School, 45 CFR Part 164 - PART 164—SECURITY AND PRIVACY, law.cornell.edu, https://www.law.cornell.edu/cfr/text/45/part-164 (accessed November 08, 2024)
