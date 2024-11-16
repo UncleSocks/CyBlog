@@ -198,25 +198,10 @@ Specifically, information created or received by covered entities, public health
 - Genetic health information [(`45 CFR § 160.103`)](https://www.law.cornell.edu/cfr/text/45/160.103); or
 - Information traceable to a patient by one or more of the HIPAA 18 identifiers
 
-The HHS lists 18 identifiers that can potentially identify, contact, or locate an individual [`30`]: 
-1. Names;
-2. All geographical subdivisions smaller than a state;
-3. All elements of dates, except year, directly related to an individual;
-4. Phone numbers;
-5. Fax numbers;
-6. Electronic mail addresses;
-7. Social security numbers (SSN);
-8. Medical record numbers (MRN);
-9. Health plan beneficiary numbers;
-10. Account numbers;
-11. Certificate or license numbers;
-12. Vehicle identifiers and serial numbers, including license plate numbers;
-13. Device identifiers and serial numbers;
-14. Web Universal Resource Locators (URLs);
-15. Internet Protocol (IP) address numbers;
-16. Biometric identifiers, including finger and voice prints;
-17. Full face photographic images and any comparable images; and 
-18. Any other unique identifying number, characteristic, or code
+The HHS lists 18 identifiers that can potentially identify, contact, or locate an individual, as shown in Fig. 5 below [`30`]: 
+
+![18 HIPAA Identifiers](../../hipaa/hipaa-identifiers.png)
+*Fig. 4. 18 Identifiers of HIPAA*
 
 #### De-identified Health Information
 A **De-identified Health Information** is a health information that does not identify and cannot be used to identify an individual [`31`]. 45 CFR § 164.514(b) outlines two methods a covered entity can use to determine whether a PHI is de-identified [`31`]:
@@ -226,11 +211,17 @@ A **De-identified Health Information** is a health information that does not ide
 
 2. Safe Harbor  
 
-    Where the 18 HIPAA Identifiers (listed above) of the individual, or of relatives, employers, or household members of the individual are removed; and the covered entity does not have actual knowledge that the information could be used alone or in combination with other information to identify an individual.
+    Where the 18 HIPAA Identifiers (listed above) of the individual, or of relatives, employers, or household members of the individual are removed; and the covered entity does not have actual knowledge that residual information could be used alone or in combination with other information to identify an individual.
 
 45 CFR § 164.514(c) outlines the method covered entities can implement to re-identify the information, specifically by assigning a code or other record identification, provided that [`31`]:
 1. [Deviation] the code or other record identification was not derived from or related to the information of the individual, and cannot be translated to identify an individual -- basically think of the best practices when implementing a cookie in your web applications; and 
 2. [Security] the covered entity does not use or disclose the code or other record identification for other purposes beside to re-identify the information, and does not disclose the mechanism for re-identification.
+
+Fig. 5 below outlines the flow of the de-identification and re-identification of health information: 
+
+
+![De- and Re-identification](../../hipaa/de-and-re-identification.png)
+*Fig. 5. De- and Re-identification of PHI*
 
 #### Permitted Use and Disclosure
 
