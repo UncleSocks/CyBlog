@@ -32,7 +32,7 @@ weight = 40
 
 [params.about]
 title = "UncleSocks' CyBlog"
-description = "A personal blog documenting my cybersecurity journey."
+description = "My personal blog documenting my cybersecurity journey."
 
 [[params.socialLinks]]
 icon = "fa-brands fa-linkedin"
