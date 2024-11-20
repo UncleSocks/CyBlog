@@ -40,7 +40,7 @@ As part of our initial setup, we will create a blank array, where we will append
 
 ### Connecting with Abuse IP DB APIv2
 
-The PS script uses Abuse IP DB's APIv2 but we need to specify the HTTP parameters: URI, Method, Headers, and Body (Query) [`1`]. The script sends a GET request to `https://api.abuseipdb.com/api/v2/check` with the API key as the authentication, while specifying the accepted format to be JSON. The script will then query each IP address from the `.txt` file using a For-Loop.
+The PS script uses Abuse IP DB's APIv2 but we need to specify the HTTP parameters: URI, Method, Headers, and Body (Query) [`1`]. The script sends a GET request to `https://api.abuseipdb.com/api/v2/check` with the API key as the authentication, while specifying the accepted format to be JSON [`2`]. The script will then query each IP address from the `.txt` file using a For-Loop.
 
 ```
 $headers = @{
@@ -112,7 +112,7 @@ When parsing the JSON response, we can access each child value by specifying the
 
 ### Exporting to a CSV File
 
-Before the script can generate a CSV file, it will first create an array of `PSCustomObject` to represent a collection of items. This effectively creates the columns and the headers of the CSV file, while specifying which function to append on each column.
+Before the script can generate a CSV file, it will first create an array of `PSCustomObject` to represent a collection of key/value pairs, which is useful when using the `Export-Csv` cmdlet [`3`]. This effectively creates the columns and the headers of the CSV file, while specifying which function to append on each column.
 
 ```
         $processedIp = [PSCustomObject]@{
@@ -146,5 +146,10 @@ After the script is finished running, it should generate a CSV file on the speci
 ![Sample CSV Output](../../pixie-powershell/pixie-ps-sample.png)
 *Fig. 1. Sample Pixie PowerShell CSV Output*
 
+I hope you learn something useful from this blog post, and of course, I also hope that this tool helps make SOC analysts' work a little bit easier.
+
+
 # Reference
 1. Microsoft, Invoke-RestMethod, -Body, microsoft.com, https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.4 (accessed November 20, 2024)
+2. AbuseIPDB, CHECK Endpoint, abuseipdb.com, https://docs.abuseipdb.com/#introduction (accessed November 20, 2024)
+3. Microsoft, Everything you wanted to know about PSCustomObject,  microsoft.com, https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pscustomobject?view=powershell-7.4 (accessed November 20, 2024)
